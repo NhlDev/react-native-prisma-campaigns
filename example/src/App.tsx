@@ -1,31 +1,28 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-prisma-campaigns';
+import { StyleSheet } from 'react-native';
+import { PrismaLoad, PrismaPlaceholder } from 'react-native-prisma-campaigns';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  PrismaLoad(
+    'university.prismacampaigns.com',
+    '443',
+    '30674681-9f09-4a73-b01e-db2e0ba66d7b',
+    'nalderete'
+  );
+
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <PrismaPlaceholder style={styles.placeholderStyles} placeholderName='PopUp-Banner Web'>
+    </PrismaPlaceholder>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+  placeholderStyles: {
+    alignContent: "center",
+    width: '100%',
+    height: 200
+  }
 });

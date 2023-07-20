@@ -15,7 +15,6 @@ def isNewArchitectureEnabled() {
 
 apply plugin: "com.android.library"
 
-
 def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
 
 if (isNewArchitectureEnabled()) {
@@ -89,6 +88,9 @@ dependencies {
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
+  
+  compileOnly(files("../android-prisma-sdk/prisma-sdk.aar"))   
+  implementation('us.bpsm:edn-java:0.5.0')
 }
 
 if (isNewArchitectureEnabled()) {

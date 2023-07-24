@@ -15,7 +15,7 @@ npm install react-native-prisma-campaigns
 You need to add the Prisma SDK dependency on you project's gradle file.
 You can use the aar file bundled with this package:
 ```gradle
-implementation files('./prisma-sdk.aar')
+  implementation files("../../node_modules/react-native-prisma-campaigns/android-prisma-sdk/prisma-sdk.aar")
 ```
 Or [download](http://docs.prismacampaigns.com/sdk/app-release.aar) the .AAR library and reference the downloaded file.
 

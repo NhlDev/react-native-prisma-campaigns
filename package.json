@@ -1,6 +1,6 @@
 {
   "name": "react-native-prisma-campaigns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Integration with Prisma Campaigns native SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

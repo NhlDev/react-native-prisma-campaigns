@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { PrismaLoad, PrismaPlaceholder } from 'react-native-prisma-campaigns';
 
 export default function App() {
@@ -11,10 +11,16 @@ export default function App() {
   );
 
   return (
-    <PrismaPlaceholder
+    <SafeAreaView>
+      {/* <PrismaPlaceholder
       style={styles.placeholderStyles}
       placeholderName="PopUp-Banner Web"
-    />
+    />  */}
+      <PrismaPlaceholder
+        style={styles.placeholderStyles}
+        placeholderName="App7_Dashboard"
+      />
+    </SafeAreaView>
   );
 }
 

@@ -1,0 +1,284 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.1.50 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -Onone -module-name Prisma
+import Foundation
+import PrismaPrivate.Jumio
+import PrismaPrivate.MPEdn
+@_exported import Prisma
+import PrismaPrivate
+import Swift
+import UIKit
+import WebKit
+@objc public protocol UIBanner {
+  @objc func getView() -> UIKit.UIView
+  @objc func getFunnel() -> Prisma.Funnel
+  @objc func getHeight() -> Swift.Int
+  @objc func getWidth() -> Swift.Int
+  @objc func setTranslations(translations: Prisma.Translations)
+  @objc func getTranslations() -> Prisma.Translations
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MessageStep : Prisma.FunnelStepView {
+  @objc deinit
+}
+public class PageDataCapture : Prisma.PageControl {
+  public init(page: Prisma.PageStep, definition: [Any])
+  public func create() -> UIKit.UIView
+  public func setConstraints(parent: Prisma.Column)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Translations : ObjectiveC.NSObject {
+  @objc public func translate(section: Swift.String, key: Swift.String) -> Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIColor {
+  public class func colorFromRGBString(string: Swift.String) -> UIKit.UIColor
+}
+@objc @objcMembers public class Tracker : ObjectiveC.NSObject {
+  @objc public init(prisma: Prisma.Client)
+  @objc public func initialized() -> Swift.Bool
+  @objc public func trace() -> Swift.String
+  @objc public func trail() -> Swift.String
+  @objc public func trackLocation(uri: Swift.String, title: Swift.String)
+  @objc public func reset()
+  @objc public func api() -> Prisma.API
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class PageText : Prisma.PageControl {
+  public init(page: Prisma.PageStep, definition: [Any])
+  public func create() -> UIKit.UIView
+  public func setConstraints(parent: Prisma.Column)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @IBDesignable public class PopupViewController : UIKit.UIViewController {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @objcMembers public class API : ObjectiveC.NSObject {
+  @objc public init(debug: Swift.Bool = false)
+  @objc public func get(url: Swift.String, onSuccess: @escaping ([Swift.String]) -> Swift.Void, onError: @escaping (Swift.Int) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class PageButton : Prisma.PageControl {
+  public init(page: Prisma.PageStep, definition: [Any])
+  public func create() -> UIKit.UIView
+  public func setConstraints(parent: Prisma.Column)
+  @objc deinit
+}
+@objc public protocol PrismaDismissHandler {
+  @objc func onDismissed(campaignId: Swift.Int64) -> Swift.Bool
+}
+@objc public protocol PrismaRedirectHandler {
+  @objc func onRedirect(url: Foundation.URL, campaignId: Swift.Int64) -> Swift.Bool
+}
+@objc @objcMembers public class Client : ObjectiveC.NSObject {
+  @objc public var debug: Swift.Bool
+  @objc public static var shared: Prisma.Client?
+  @objc public static func load(server: Swift.String, port: Swift.String, appToken: Swift.String, customer: Swift.String, proto: Swift.String = "https")
+  @objc public init(server: Swift.String, port: Swift.String, appToken: Swift.String, customer: Swift.String, proto: Swift.String)
+  @objc public func getTranslations() -> Prisma.Translations
+  @objc public func syncView(viewName: Swift.String, placeholders: [Prisma.Placeholder], onSynced: ((Swift.Dictionary<Swift.String, Prisma.PlaceholderContent>) -> Swift.Bool)? = nil, onError: ((Swift.Int) -> Swift.Void)? = nil, redirectHandler: Prisma.PrismaRedirectHandler? = nil, dismissHandler: Prisma.PrismaDismissHandler? = nil, retries: Swift.Int)
+  @objc public func syncView(viewName: Swift.String, placeholders: [Prisma.Placeholder], onSynced: ((Swift.Dictionary<Swift.String, Prisma.PlaceholderContent>) -> Swift.Bool)? = nil, onError: ((Swift.Int) -> Swift.Void)? = nil, redirectHandler: Prisma.PrismaRedirectHandler? = nil, dismissHandler: Prisma.PrismaDismissHandler? = nil)
+  @objc public func subscribe(deviceToken: Swift.String)
+  @objc public func convert(campaignId: Swift.String, callback: @escaping ((Swift.Bool) -> Swift.Void))
+  @objc public func getBaseURL() -> Swift.String
+  @objc public func getCustomerId() -> Swift.String
+  @objc public func setCustomerId(customerId: Swift.String)
+  @objc public func getAppToken() -> Swift.String
+  @objc public func getTracker() -> Prisma.Tracker
+  @objc public func reset()
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PrismaDateInput : Prisma.DataInput {
+  override public func create() -> UIKit.UIView
+  override public func getValue() -> Any
+  @objc public func datePickerValueChanged(_ sender: UIKit.UIDatePicker)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ModalPopup : UIKit.UIViewController {
+  @objc public static var s_activePopups: Swift.Set<Prisma.ModalPopup>
+  @objc deinit
+  @objc public static func closeActivePopups()
+  @objc public static func hasActivePopups() -> Swift.Bool
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc public func setContent(content: Prisma.PlaceholderContent)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @IBDesignable public class HtmlBannerView : WebKit.WKWebView, WebKit.WKScriptMessageHandler, Prisma.UIBanner {
+  @objc public func getView() -> UIKit.UIView
+  @objc public func getHeight() -> Swift.Int
+  @objc public func getWidth() -> Swift.Int
+  @objc public func setOnDismiss(fn: @escaping (() -> Swift.Void))
+  @objc public func setOnStartFunnel(fn: @escaping (() -> Swift.Void))
+  @objc public func setTranslations(translations: Prisma.Translations)
+  @objc public func getTranslations() -> Prisma.Translations
+  @objc public func dismissCalled() -> Swift.Bool
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public init(htmlContent: Swift.String, width: Swift.Int, height: Swift.Int, funnel: Prisma.Funnel, category: Swift.String, group: Swift.String)
+  @objc public func getHTMLContent() -> Swift.String
+  @objc public func getFunnel() -> Prisma.Funnel
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class PlaceholderContent : ObjectiveC.NSObject {
+  @objc public var banners: [Prisma.UIBanner]
+  @objc public func isPopup() -> Swift.Bool
+  @objc public func showClose() -> Swift.Bool
+  @objc public func transitionTime() -> Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class WebViewStep : Prisma.FunnelStepView {
+  @objc deinit
+}
+public protocol PageControl {
+  func create() -> UIKit.UIView
+  func setConstraints(parent: Prisma.Column)
+}
+public func parseHexColor(color: Swift.String) -> UIKit.UIColor
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PageWebView : WebKit.WKWebView, WebKit.WKScriptMessageHandler, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public init(landingUrl: Swift.String, parent: Prisma.FunnelStepView)
+  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable public class ColorableStackView : UIKit.UIStackView {
+  @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class Row : Prisma.ColorableStackView, Prisma.PageControl {
+  public func parseRow(page: Prisma.PageStep, definition: [Any])
+  public func setConstraints(parent: Prisma.Column)
+  public func create() -> UIKit.UIView
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class Column : Prisma.ColorableStackView, Prisma.PageControl {
+  public func create() -> UIKit.UIView
+  public func setConstraints(parent: Prisma.Column)
+  public func parseColumn(page: Prisma.PageStep, definition: [Any])
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PageStep : Prisma.FunnelStepView {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DataCaptureStep : Prisma.FunnelStepView {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class DataInput : ObjectiveC.NSObject {
+  public func getName() -> Swift.String
+  public func getValue() -> Any
+  public func create() -> UIKit.UIView
+  public func label() -> UIKit.UILabel?
+  public func getCatalog(catalogId: Swift.Int64, onLoaded: @escaping ([Swift.String]) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class PageImage : Prisma.PageControl {
+  public init(page: Prisma.PageStep, definition: [Any])
+  public func create() -> UIKit.UIView
+  public func setConstraints(parent: Prisma.Column)
+  @objc deinit
+}
+@objc @objcMembers public class FunnelSyncContext : ObjectiveC.NSObject {
+  @objc public var viewName: Swift.String
+  @objc public var placeholders: [Prisma.Placeholder]
+  @objc public var onSynced: ((Swift.Dictionary<Swift.String, Prisma.PlaceholderContent>) -> Swift.Bool)?
+  @objc public var dismissHandler: Prisma.PrismaDismissHandler?
+  @objc public var redirectHandler: Prisma.PrismaRedirectHandler?
+  @objc public init(viewName: Swift.String, placeholders: [Prisma.Placeholder], onSynced: ((Swift.Dictionary<Swift.String, Prisma.PlaceholderContent>) -> Swift.Bool)?, redirectHandler: Prisma.PrismaRedirectHandler? = nil, dismissHandler: Prisma.PrismaDismissHandler? = nil)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers @IBDesignable public class ImageBannerView : UIKit.UIImageView, Prisma.UIBanner {
+  @objc public func getView() -> UIKit.UIView
+  @objc public func getHeight() -> Swift.Int
+  @objc public func getWidth() -> Swift.Int
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func getFunnel() -> Prisma.Funnel
+  @objc public func setTranslations(translations: Prisma.Translations)
+  @objc public func getTranslations() -> Prisma.Translations
+  @objc public func setOnStartFunnel(fn: @escaping (() -> Swift.Void))
+  @objc public init(imageUrl: Swift.String, width: Swift.Int, height: Swift.Int, funnel: Prisma.Funnel, category: Swift.String, group: Swift.String)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RedirectStep : Prisma.FunnelStepView {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @IBDesignable public class Placeholder : UIKit.UIStackView {
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc public init(name: Swift.String)
+  @objc public func clearContent()
+  @objc public func setPrismaContext(ctx: Swift.Dictionary<Swift.String, Swift.String>)
+  @objc public func getPrismaContext() -> Swift.Dictionary<Swift.String, Swift.String>
+  @objc public func closePopup()
+  @objc public func hasOpenedPopup() -> Swift.Bool
+  @objc public func setContent(content: Prisma.PlaceholderContent)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class FunnelStepView : ObjectiveC.NSObject {
+  public func showWaitIndicator(show: Swift.Bool, message: Swift.String?)
+  public func setWaitState(state: Swift.Bool, message: Swift.String?)
+  public func setWaitState(state: Swift.Bool)
+  public func getWaitState() -> Swift.Bool
+  public func getDefaultActionsView() -> UIKit.UIView
+  public func createActionsToolbar()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PrismaComboInput : Prisma.DataInput, UIKit.UIPickerViewDataSource, UIKit.UIPickerViewDelegate {
+  @objc public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  override public func create() -> UIKit.UIView
+  override public func getValue() -> Any
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Funnel : ObjectiveC.NSObject {
+  @objc public static var s_activeFunnels: Swift.Set<Prisma.Funnel>
+  @objc deinit
+  @objc public static func closeActiveFunnels()
+  @objc public static func hasActiveFunnels() -> Swift.Bool
+  @objc public func closeCurrentView()
+  @objc public func show()
+  @objc public func getClient() -> Prisma.Client
+  @objc public func getFunnelSyncContext() -> Prisma.FunnelSyncContext
+  @objc public func setTranslations(translations: Prisma.Translations)
+  @objc public func getTranslations() -> Prisma.Translations
+  @objc public func dismiss()
+  @objc public func start(source: Swift.String? = nil)
+  @objc public func startWizard(source: Swift.String?)
+  @objc public func allowDismiss() -> Swift.Bool
+  @objc public func hasSteps() -> Swift.Bool
+  @objc public func openFunnelLanding(source: Swift.String?)
+  @objc public func getFunnelLanding() -> Swift.String
+  @objc public func onFunnelViewClosed()
+  @objc public func getCampaign() -> Swift.Int64
+  @objc public func getTrackingToken() -> Swift.String
+  @objc public func getTrailId() -> Swift.String
+  @objc public func nextFunnelStep()
+  @objc override dynamic public init()
+}

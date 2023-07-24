@@ -1,6 +1,6 @@
 {
   "name": "react-native-prisma-campaigns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Integration with Prisma Campaigns native SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -11,6 +11,7 @@
     "src",
     "lib",
     "android",
+    "android-prisma-sdk",
     "ios",
     "cpp",
     "*.podspec",
@@ -41,7 +42,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "prisma",
+    "campaigns",
+    "prismacampaigns"
   ],
   "repository": "https://github.com/NhlDev/react-native-prisma-campaigns",
   "author": "Nahuel Alderete <nahuel.ald@gmail.com> (https://github.com/NhlDev)",

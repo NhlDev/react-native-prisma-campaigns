@@ -1,7 +1,6 @@
 import React from 'react';
 import { requireNativeComponent } from 'react-native';
-import { Text } from 'react-native';
-import { NativeModules, View, Platform, type ViewStyle } from 'react-native';
+import { NativeModules, Platform, type ViewStyle } from 'react-native';
 
 const LINKING_ERROR =
   `The package 'react-native-prisma-campaigns' doesn't seem to be linked. Make sure: \n\n` +
@@ -12,13 +11,13 @@ const LINKING_ERROR =
 const PrismaCampaigns = NativeModules.PrismaCampaigns
   ? NativeModules.PrismaCampaigns
   : new Proxy(
-    {},
-    {
-      get() {
-        throw new Error(LINKING_ERROR);
-      },
-    }
-  );
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
 
 const NativeView = requireNativeComponent('PrismaCampaignsView');
 
@@ -33,7 +32,7 @@ export const PrismaLoad = (
 
 export const PrismaPlaceholder = (props: PrismaProps) => {
   // Retorno con el banner envuelto en un modal, o sin modal
-  return <NativeView {...props}></NativeView>;
+  return <NativeView {...props} />;
 };
 
 interface PrismaProps {

@@ -21,7 +21,7 @@ Or [download](http://docs.prismacampaigns.com/sdk/app-release.aar) the .AAR libr
 
 #### iOS
 
-Work in progress
+No futher configuration required.
 
 ## Usage
 

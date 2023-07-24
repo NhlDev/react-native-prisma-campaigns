@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
   StyleSheet,
   Linking,
-  ViewStyle,
+  type ViewStyle,
   Platform,
 } from 'react-native';
-import WebView, { WebViewMessageEvent } from 'react-native-webview';
+import WebView, { type WebViewMessageEvent } from 'react-native-webview';
 
 const LINKING_ERROR =
   `The package 'react-native-prisma-campaigns' doesn't seem to be linked. Make sure: \n\n` +

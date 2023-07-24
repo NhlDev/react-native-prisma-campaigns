@@ -1,0 +1,9 @@
+module PrismaPrivate {
+    explicit module MPEdn {
+        export *
+    }
+
+    explicit module Jumio {
+        export *
+    }
+}

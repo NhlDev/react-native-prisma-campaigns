@@ -1,4 +1,6 @@
 import React from 'react';
+import { requireNativeComponent } from 'react-native';
+import { Text } from 'react-native';
 import { NativeModules, View, Platform, type ViewStyle } from 'react-native';
 
 const LINKING_ERROR =
@@ -10,13 +12,15 @@ const LINKING_ERROR =
 const PrismaCampaigns = NativeModules.PrismaCampaigns
   ? NativeModules.PrismaCampaigns
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
+
+const NativeView = requireNativeComponent('PrismaCampaignsView');
 
 export const PrismaLoad = (
   Server: string,
@@ -29,7 +33,7 @@ export const PrismaLoad = (
 
 export const PrismaPlaceholder = (props: PrismaProps) => {
   // Retorno con el banner envuelto en un modal, o sin modal
-  return <View {...props} />;
+  return <NativeView {...props}></NativeView>;
 };
 
 interface PrismaProps {

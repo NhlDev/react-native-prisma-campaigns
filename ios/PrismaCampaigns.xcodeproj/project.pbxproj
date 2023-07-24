@@ -6,10 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* PrismaCampaigns.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* PrismaCampaigns.mm */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,8 +20,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libPrismaCampaigns.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPrismaCampaigns.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D0CCCBE2A6B0B9D00961E4D /* PrismaCampaignsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrismaCampaignsView.m; sourceTree = "<group>"; };
+		4D0CCCC32A6B203400961E4D /* PrismaCampaigns.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrismaCampaigns.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* PrismaCampaigns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrismaCampaigns.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* PrismaCampaigns.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrismaCampaigns.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,11 +44,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4D0CCCBB2A6B093800961E4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				4D0CCCC32A6B203400961E4D /* PrismaCampaigns.m */,
+				4D0CCCBE2A6B0B9D00961E4D /* PrismaCampaignsView.m */,
+				4D0CCCBB2A6B093800961E4D /* Frameworks */,
 				B3E7B5881CC2AC0600A0062D /* PrismaCampaigns.h */,
-				B3E7B5891CC2AC0600A0062D /* PrismaCampaigns.mm */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* PrismaCampaigns.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

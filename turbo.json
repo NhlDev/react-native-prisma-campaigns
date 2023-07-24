@@ -5,6 +5,7 @@
       "inputs": [
         "package.json",
         "android",
+        "android-prisma-sdk",
         "!android/build",
         "src/*.ts",
         "src/*.tsx",

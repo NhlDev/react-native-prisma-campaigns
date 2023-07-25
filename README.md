@@ -7,26 +7,28 @@ This Library is a brigde with Prisma's [Android SDK](https://docs.prismacampaign
 ## Installation
 
 ```sh
-npm install react-native-prisma-campaigns
+npm install react-native-prisma-campaigns react-native-webview
 ```
+
+`react-native-webview` is required for rendering HTML banners.
 
 ### Android
 
 You need to add the Prisma SDK dependency on you project's gradle file.
 You can use the aar file bundled with this package:
 ```gradle
-implementation files('./prisma-sdk.aar')
+  implementation files("../../node_modules/react-native-prisma-campaigns/android-prisma-sdk/prisma-sdk.aar")
 ```
 Or [download](http://docs.prismacampaigns.com/sdk/app-release.aar) the .AAR library and reference the downloaded file.
 
 #### iOS
 
-No futher configuration required.
+No further configuration required.
 
 ## Usage
 
 Before starting to show Prisma banners, you need to call the **PrismaLoad** method:
-```js
+```tsx
 import { PrismaLoad } from 'react-native-prisma-campaigns';
 
 // ...
@@ -52,20 +54,22 @@ export default function App() {
 Once you initialized the library, you can start displaying the banners
 You need to use the UI component `*PrismaPlaceholder*` for rendering the banners:
 
-```js
+```tsx
 
 //...
 
  return (
-    <PrismaPlaceholder style={styles.placeholderStyles} placeholderName='PopUp-Banner Web'>
-    </PrismaPlaceholder>
+    <PrismaPlaceholder style={styles.placeholderStyles} placeholderName='PrismaPlaceholderName'/>
   );
-
 }
 
 ```
 
-Where the prop `placeholderName` is the name of the placeholder required to render.
+Where the property `placeholderName` is the name of the [placeholder configured on Prisma](https://docs.prismacampaigns.com/en/user-manual/basic-config.html#placeholders).
+
+## TO DO:
+  - Test interoperability with Jumio SDK (Android)
+  - Support multiple campaigns in a single placeholder (Android)
 
 ## Contributing
 

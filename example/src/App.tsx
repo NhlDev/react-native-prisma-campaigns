@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import { PrismaLoad, PrismaPlaceholder } from 'react-native-prisma-campaigns';
+import { PrismaLoad, PrismaPlaceholder  } from 'react-native-prisma-campaigns';
 
 export default function App() {
   PrismaLoad(

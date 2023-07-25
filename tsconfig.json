@@ -1,25 +1,33 @@
 {
-  "include": ["src/*"],
   "compilerOptions": {
-    "baseUrl": "./src/",
-    "jsx": "react-native",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["es2017"],
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "lib",
-    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "react-native-prisma-campaigns": [
+        "./src/index"
+      ]
+    },
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "pretty": true,
+    "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "target": "esnext",
+    "verbatimModuleSyntax": true,
     "moduleSuffixes": [
       ".ios",
       ".android",

@@ -40,13 +40,12 @@ export const PrismaPlaceholder = (props: PrismaProps) => {
         if (props.placeholderName) {
             PrismaCampaigns.syncPage(props.placeholderName).then(
                 (bannerData: PrismaBanner) => {
-                    syncPlaceholder(bannerData);
-
                     if (bannerData.IsPopup && bannerData.PopUpTimeout) {
                         setTimeout(() => {
-                            setModalVisible(false);
+                            syncPlaceholder(bannerData);
                         }, bannerData.PopUpTimeout);
                     }
+                    else { syncPlaceholder(bannerData); }
                 }
             );
         } else {

@@ -142,6 +142,10 @@ public class PrismaCampaignsModule extends ReactContextBaseJavaModule {
               long width = (Long) bannerData.get(Keyword.newKeyword("width"));
               long height = (Long) bannerData.get(Keyword.newKeyword("height"));
 
+              if (bannerData.containsKey(K_TrackingToken)) {
+                trackingToken = (UUID) bannerData.get(K_TrackingToken);
+              }
+
               Funnel funnel = new Funnel(
                 Client.shared,
                 funnelData,
@@ -149,10 +153,6 @@ public class PrismaCampaignsModule extends ReactContextBaseJavaModule {
                 Client.shared.getTracker().trail(),
                 trackingToken.toString().toLowerCase()
               );
-
-              if (bannerData.containsKey(K_TrackingToken)) {
-                trackingToken = (UUID) bannerData.get(K_TrackingToken);
-              }
 
               // banner tipo imagen
               if (bannerData.containsKey(K_Link)) {
